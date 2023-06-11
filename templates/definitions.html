@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="stylesheet" href="static/css/style.css">
+		<link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+		<title> Creative Writing</title>
+
+	<title>Definitions</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			text-align: center;
+		}
+
+		h1 {
+			margin-top: 50px;
+			font-size: 40px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+
+		form {
+			margin-top: 50px;
+		}
+
+		input[type="text"] {
+			padding: 10px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+		}
+
+		input[type="submit"] {
+			padding: 10px 20px;
+			background-color: #4CAF50;
+			color: white;
+			border: none;
+			border-radius: 5px;
+			font-size: 16px;
+			cursor: pointer;
+		}
+
+		.result {
+			margin-top: 50px;
+			padding: 20px;
+			border: 1px solid #ccc;
+			border-radius: 5px;
+			font-size: 16px;
+			text-align: left;
+		}
+	</style>
+</head>
+<body>
+  
+	<div class="topnav" id="myTopnav">
+		<a href="index" class="active">Home</a>
+		<a href="definitions">Definition</a>
+		<a href="explanations">Explantions</a>
+		<a href="presentanion"> Presentanion</a>
+		<div class="dropdown">
+		  <button class="dropbtn">Content
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="eassy"> Eassy</a>
+			<a href="story">Story</a>
+			<a href="article">Article</a>
+		  </div>
+		</div>
+	
+		<div class="dropdown">
+		  <button class="dropbtn">Programming
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="cpp_programming">C++</a>
+			<a href="python">Java</a>
+		  
+		  </div>
+		</div>
+	
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	  </div>
+  
+	<script>
+	  function myFunction() {
+	  var x = document.getElementById("myTopnav");
+	  if (x.className === "topnav") {
+		x.className += " responsive";
+	  } else {
+		x.className = "topnav";
+	  }
+	}
+	</script>
+
+	<h1>Get Definition</h1>
+	<form action="/definitions" method="post">
+		<input type="text" name="term" placeholder="Enter a term...">
+		<input type="submit" value="Search">
+	</form>
+	{% if definition %}
+		<div class="result">
+			<h3>Definition of {{ term }}</h3>
+			<p>{{ definition }}</p>
+		</div>
+	{% endif %}
+</body>
+</html>

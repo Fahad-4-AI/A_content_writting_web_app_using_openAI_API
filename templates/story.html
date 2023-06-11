@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+    
+    <title>Generated Story</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+      h1 {
+        text-align: center;
+        margin-top: 50px;
+      }
+      form {
+        max-width: 800px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      label {
+        font-size: 20px;
+        margin-bottom: 10px;
+      }
+      input[type="text"],
+      textarea {
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 20px;
+        font-size: 16px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        box-sizing: border-box;
+        resize: vertical;
+      }
+      input[type="submit"] {
+        background-color: #4CAF50;
+        color: white;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        font-size: 16px;
+      }
+      input[type="submit"]:hover {
+        background-color: #45a049;
+      }
+      .output {
+        max-width: 800px;
+        margin: 0 auto;
+      }
+      .generated-story {
+        margin-top: 50px;
+        font-size: 18px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+
+    <div class="topnav" id="myTopnav">
+      <a href="index" class="active">Home</a>
+      <a href="definitions">Definition</a>
+      <a href="explanations">Explantions</a>
+      <a href="presentanion"> Presentanion</a>
+      <div class="dropdown">
+        <button class="dropbtn">Content
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="essay"> Eassy</a>
+          <a href="story">Story</a>
+          <a href="article">Article</a>
+        </div>
+      </div>
+  
+      <div class="dropdown">
+        <button class="dropbtn">Programming
+          <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content">
+          <a href="cpp_programming">C++</a>
+          <a href="python">Java</a>
+        
+        </div>
+      </div>
+  
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+    </div>
+
+
+    <h1>Generate a Story</h1>
+    <form method="post">
+      <label for="characters">Characters:</label>
+      <input type="text" id="characters" name="characters" required><br><br>
+      <label for="setting">Setting:</label>
+      <input type="text" id="setting" name="setting" required><br><br>
+      <label for="plot">Plot:</label><br>
+      <textarea id="plot" name="plot" rows="10" cols="50"></textarea><br><br>
+      <input type="submit" value="Generate Story">
+    </form>
+    <div class="output">
+      {% if generated_story %}
+      <h2>Generated Story:</h2>
+      <p class="generated-story">{{ generated_story }}</p>
+      {% endif %}
+    </div>
+  </body>
+</html>

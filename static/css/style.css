@@ -1,0 +1,519 @@
+/* Add a black background color to the top navigation */
+body{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+.topnav {
+  background-color: #333;
+  overflow: hidden;
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Add an active class to highlight the current page */
+.active {
+  background-color: #04AA6D;
+  color: white;
+}
+
+/* Hide the link that should open and close the topnav on small screens */
+.topnav .icon {
+  display: none;
+}
+
+/* Dropdown container - needed to position the dropdown content */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Style the dropdown button to fit inside the topnav */
+.dropdown .dropbtn {
+  font-size: 17px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+/* Style the dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Style the links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a dark background on topnav links and the dropdown button on hover */
+.topnav a:hover, .dropdown:hover .dropbtn {
+  background-color: #555;
+  color: white;
+}
+
+/* Add a grey background to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Show the dropdown menu when the user moves the mouse over the dropdown button */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+/* When the screen is less than 600 pixels wide, hide all links, except for the first one ("Home"). Show the link that contains should open and close the topnav (.icon) */
+@media screen and (max-width: 600px) {
+  .topnav a:not(:first-child), .dropdown .dropbtn {
+    display: none;
+  }
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+}
+
+/* The "responsive" class is added to the topnav with JavaScript when the user clicks on the icon. This class makes the topnav look good on small screens (display the links vertically instead of horizontally) */
+
+
+
+
+/* body{ margin:0; font-family:'tahoma';
+  box-sizing: border-box;
+  padding: 0px;
+} */
+
+/* nav {
+	margin:-3px auto;
+  width:100%;
+  height:auto;
+  display:inline-block;
+  background:#37bc9b;
+  font-family: 'Alkatra', cursive;
+  font-size: 18px;
+   /* font-family: 'Alkatra', cursive; 
+  font-family: 'Hind Siliguri', sans-serif;   */
+/* font-family: 'Alkatra', cursive;
+font-family: 'Anton', sans-serif;
+font-family: 'Hind Siliguri', sans-serif; */
+  
+/* }
+
+nav ul {
+	margin:0;
+    padding:0;
+  list-style-type:none;
+  float:left;
+  display:inline-block;
+} */
+
+/* nav ul li {
+	position:relative;
+	margin:0 20px 0 0;
+	float:left;
+  display:inline-block;
+} */
+
+/* li > a:after { content: ' »'; } /* Change this in order to change the Dropdown symbol */
+/* 
+li > a:only-child:after { content: ''; }
+
+nav ul li a {
+	padding:7px;
+  display:inline-block;
+  color:white;
+  text-decoration:none;
+} */ */
+
+/* nav ul li a:hover {
+  /* opacity:0.5; */
+  /* background-color: blueviolet;
+   */
+   /* background-color: black;
+} */
+
+/* nav ul li ul {
+	display:none;
+  position:absolute;
+  left:0;
+  background:#37bc9b;
+  float:left; */
+
+/* 
+nav ul li ul li {
+	width:100%;
+  border-bottom:1px solid rgba(255,255,255,.3);
+}
+
+nav ul li:hover ul {
+  display:block;
+  
+} */ */
+ 
+
+
+/*  work image */
+ 
+.image-container {
+  position: relative;
+   display: inline-block; 
+   display: block;
+}
+
+ .image-container img{
+  width: 100%;
+  height: 650px;
+
+}
+.overlay {
+  position: absolute;
+  top: 35%;
+  left: 35%;
+  transform: translate(-50%, -50%);
+}
+ 
+.overlay h2 {
+  font-size: 2em;
+  color: #000;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #0099ff, #66ccff);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+   
+}
+ .overlay p{ 
+  font-size: 1rem;
+  font-weight: bold;
+  color: #1f1b1b;
+  width: 60%;
+  text-align: justify;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-image: linear-gradient(to right, #000406, #020f15);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  
+} 
+
+.overlay button {
+  padding: 1em 2em;
+  background-color: #fff;
+  color: #000;
+  border: none;
+  border-radius: 0.5em;
+  font-size: 1.2em;
+  font-weight: bold;
+    margin: 0px 50px; */
+}
+
+.overlay button:hover{
+  background-color: black;
+  color: #fff;
+} 
+
+ 
+
+.column {
+  float: left;
+  width: 23.3%;
+  margin-bottom: 16px;
+  padding: 0 8px;
+}
+
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+}
+
+.about-section {
+  padding: 50px;
+  /* text-align: center; */
+  text-align: justify;
+  background-color: #474e5d;
+  color: white;
+  font-family: 'Alkatra', cursive;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.container {
+  padding: 0 16px;
+}
+
+.container::after, .row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* work with email */
+
+.container a  {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #000;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.title {
+  color: grey;
+}
+
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+
+
+
+
+
+/* work footer */
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 50px 0;
+}
+.footer-container {
+  max-width: 1000px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.footer-container h3 {
+  color: #fff;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+.footer-container p {
+  font-size: 16px;
+  line-height: 24px;
+}
+.footer-container ul {
+  list-style: none;
+  padding: 0;
+}
+.footer-container ul li {
+  margin-bottom: 10px;
+}
+.footer-container ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+.footer-container ul li a:hover {
+  text-decoration: underline;
+}
+.footer-left {
+  flex-basis: 30%;
+}
+.footer-middle {
+  flex-basis: 30%;
+}
+.footer-right {
+  flex-basis: 30%;
+  text-align: right;
+}
+
+
+
+ .contanier-end {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #908484;
+  color: #fff;
+  text-align: center;
+  padding: 0px 0;
+}
+
+/* work with responsive */
+@media screen and (max-width: 967px) {
+
+  .image-container {
+    position: relative;
+     display: inline-block; 
+     display: block;
+  }
+  
+   .image-container img{
+    width: 100%;
+    height: auto;
+  
+  }
+  .overlay {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+    /* text-align: center; */
+    
+  
+  .overlay h2 {
+    font-size: 2em;
+    color: #000;
+  
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(to right, #0099ff, #66ccff);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      padding: 82px 0px 0px 0px;
+     
+  }
+   .overlay p{ 
+    font-size: 1rem;
+    font-weight: bold;
+    color: #1f1b1b;
+    width: 90%;
+    margin: 0px auto;
+    text-align: justify;
+    /* padding: 0px 0px 34px 0px */
+  
+    
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+      background-image: linear-gradient(to right, #000406, #020f15);
+      -webkit-background-clip: text;
+      -moz-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    
+  } 
+  
+  .overlay button {
+    padding: 1em 2em;
+    background-color: #fff;
+    color: #000;
+    border: none;
+    border-radius: 0.5em;
+    font-size: 1.2em;
+    font-weight: bold;
+      margin: 0px 50px; 
+       
+  }
+  
+  .overlay button:hover{
+    background-color: black;
+    color: #fff;
+  } 
+  
+}
+
+@media screen and (max-width: 767px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footer-left,
+  .footer-middle,
+  .footer-right {
+    flex-basis: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .footer-left h3,
+  .footer-middle h3,
+  .footer-right h3 {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .column {
+    margin: 0px auto;
+    width: 20%;
+    display: inline;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .column {
+    width: 100%;
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {position: relative;}
+  .topnav.responsive a.icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .topnav.responsive a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  .topnav.responsive .dropdown {float: none;}
+  .topnav.responsive .dropdown-content {position: relative;}
+  .topnav.responsive .dropdown .dropbtn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .image-container .overlay  {
+    position: static;
+    transform: none;
+    text-align: center;
+    padding: 0px !important;
+    margin: 0px !important;
+    
+  }
+  .image-container .overlay h2{
+    padding: 0px !important;
+  }
+
+  .image-container p{
+   
+    text-align: center;
+    font-size: 16px;
+  }
+}

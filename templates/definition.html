@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+	
+	<title>Definition</title>
+	<style>
+		body {
+			font-family: Arial, sans-serif;
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			background-color: #333;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+		}
+
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
+			align-items: center;
+			height: 80vh;
+		}
+
+		.box {
+			margin: 10px;
+			width: 200px;
+			height: 200px;
+			background-color: #eee;
+			border: 1px solid #ccc;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			cursor: pointer;
+			transition: transform 0.3s ease;
+		}
+
+		.box:hover {
+			transform: scale(1.05);
+			background-color: #ddd;
+		}
+
+		.box span {
+			font-size: 1.2rem;
+			font-weight: bold;
+			text-align: center;
+		}
+
+		.form-container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		form {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		input[type="text"] {
+			padding: 5px;
+			margin-bottom: 10px;
+			border-radius: 5px;
+			border: 1px solid #ccc;
+			width: 100%;
+			max-width: 400px;
+		}
+
+		button[type="submit"] {
+			padding: 5px;
+			border-radius: 5px;
+			background-color: #333;
+			color: #fff;
+			border: none;
+			cursor: pointer;
+			transition: background-color 0.3s ease;
+		}
+
+		button[type="submit"]:hover {
+			background-color: #444;
+		}
+
+		.result-container {
+			display: none;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			margin-top: 20px;
+		}
+
+		.result-container h2 {
+			margin-bottom: 10px;
+		}
+
+		.result-container p {
+			margin: 0;
+			text-align: justify;
+			max-width: 600px;
+		}
+	</style>
+</head>
+<body>
+
+	<div class="topnav" id="myTopnav">
+		<a href="index" class="active">Home</a>
+		<a href="definitions">Definition</a>
+		<a href="explanations">Explantions</a>
+		<a href="presentanion"> Presentanion</a>
+		<div class="dropdown">
+		  <button class="dropbtn">Content
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="essay"> Eassy</a>
+			<a href="story">Story</a>
+			<a href="article">Article</a>
+		  </div>
+		</div>
+	
+		<div class="dropdown">
+		  <button class="dropbtn">Programming
+			<i class="fa fa-caret-down"></i>
+		  </button>
+		  <div class="dropdown-content">
+			<a href="cpp_programming">C++</a>
+			<a href="python">Java</a>
+		  
+		  </div>
+		</div>
+	
+		<a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+	  </div>
+
+
+	<header>
+		<h1>Definition</h1>
+	</header>
+
+	<div class="container">
+		<div class="form-container">
+			<form>
+				<label for="definition-name">Definition Name:</label>
+				<input type="text" id="definition-name" name="definition_name">
+				<button type="submit" onclick="submitForm()">Submit</button>
+			</form>
+		</div>
+
+		<div class="result-container" id="result-container">
+			<h2 id="result-definition-name"></h2>
+			<p id="result-definition-description"></p>
+		</div>
+	</div>
+</body>
+</html>

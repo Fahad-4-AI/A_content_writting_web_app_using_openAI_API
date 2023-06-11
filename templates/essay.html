@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Arvo&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+
+
+    
+    <title>Essay Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+        }
+        
+        #container {
+            width: 80%;
+            max-width: 800px;
+            margin: auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+        
+        h1 {
+            text-align: center;
+            margin-top: 0;
+        }
+        
+        form {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+        
+        label {
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+        
+        textarea {
+            height: 200px;
+            margin-bottom: 20px;
+            resize: none;
+        }
+        
+        input[type="submit"] {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-bottom: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        
+        .generated-essay {
+            white-space: pre-line;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="topnav" id="myTopnav">
+        <a href="index" class="active">Home</a>
+        <a href="definitions">Definition</a>
+        <a href="explanations">Explantions</a>
+        <a href="presentanion"> Presentanion</a>
+        <div class="dropdown">
+          <button class="dropbtn">Content
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="essay"> Eassy</a>
+            <a href="story">Story</a>
+            <a href="article">Article</a>
+          </div>
+        </div>
+    
+        <div class="dropdown">
+          <button class="dropbtn">Programming
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="cpp_programming">C++</a>
+            <a href="python">Java</a>
+          
+          </div>
+        </div>
+    
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">&#9776;</a>
+      </div>
+
+
+    <div id="container">
+        <h1>Essay Generator</h1>
+        <form method="POST">
+            <label for="topic">Topic:</label>
+            <input type="text" name="topic" id="topic" required>
+            
+            <input type="submit" value="Generate">
+        </form>
+        
+        {% if generated_essay %}
+        <div class="generated-essay">
+            {{ generated_essay }}
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>
